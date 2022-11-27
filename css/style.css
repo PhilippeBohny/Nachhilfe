@@ -1,0 +1,521 @@
+/* Ich habe ungefähr zwei Stunden damit verbracht den Footer am unteren Bildrant zu fixieren, so dass es auch bei den Produkten und dem
+Feedback funktioniert.- Ohne Erfolg!!!- Was ich aber gemacht habe ist die Hintergrundfarbe, die abgerundeten Enden, das hover und die farbliche
+Abstimmung beim klicken. Das wollte ja Philipp noch. Weiter habe ich versucht den Body und den main getrennt zu formatieren. Dies funktioniert
+beim index gut aber leider ebenfalls bei den beiden Subsites nicht. Irgend was muss dort total verkackt sein! Werde mich wieder dran setzen.
+ */
+
+/* Stylesheet für die Übungswebsite */
+
+/* Base settings */
+
+*{
+    box-sizing: border-box;
+
+}
+
+html, body{
+    height: auto;
+
+}
+
+.site{
+        min-height:100%;
+
+}
+body{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font: normal 1em Verdana, sans-serif;
+    background-color: lightsteelblue;
+
+
+
+}
+
+main{
+    padding: 50px;
+    background: #ececec;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 1em;
+
+}
+
+a{
+    color: #97b314;
+}
+
+a:hover,
+a:focus {
+    background: rgba(127, 255, 212, 0);
+    color: #708900;
+}
+
+/*Schriften müssen noch bestimmt werden!*/
+
+/*Layout*/
+
+
+
+
+/*Navigation and Footer*/
+.site-nav{
+    background-color: #2d2b2b;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    color: #fff;
+    z-index: 9999;
+
+}
+
+.site-nav li{
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.site-nav li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 16px 16px;
+
+}
+
+.site-nav li a:hover {
+    background-color: white;
+    color: black;
+    transition:all .25s;
+}
+
+/*Mobile Menu*/
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+
+}
+
+.menu-open{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.menu .menu-button{
+    order: 3;
+
+}
+
+.menu-open .menu-button{
+    order: 3;
+    background-color: cornflowerblue;
+
+}
+
+.menu-open .nav-item {
+    order: 4;
+    width: 100%;
+    display: block;
+}
+
+.nav-item{
+    order: 4;
+    width: 100%;
+    display: none;
+
+}
+
+.menu .nav-current {
+    order: 1;
+    background-color: cornflowerblue;
+    color: white;
+    display: block;
+
+}
+
+.menu-open .nav-current {
+    order: 1;
+    background-color: cornflowerblue;
+    color: white;
+    display: block;
+    flex-grow: 1;
+}
+
+/*Desktop Menu*/
+@media screen and (min-width: 700px) {
+
+
+    .menu{
+        justify-content: center;
+    }
+    .menu-open{
+        justify-content: center;
+    }
+
+    .nav-item{
+        width: auto;
+        order: initial;
+        display:block;
+    }
+    .menu-open .nav-item{
+        width: auto;
+        order: initial;
+        display:block;
+    }
+    .menu .nav-current {
+        width: auto;
+        order: initial;
+    }
+
+    .menu-open .nav-current {
+        width: auto;
+        order: initial;
+    }
+    .menu-button {
+        display: none;
+    }
+
+
+}
+
+
+/*Content*/
+
+.site-content{
+    padding: 1.5rem;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+
+}
+
+/*Forms*/
+
+/*Formatierung eingefügter Bilder*/
+.iframe-bafs,iframe{
+    height: 300px;
+    margin: auto;
+    border: none;
+    min-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials{
+    padding: 40px 0;
+    color: #434343;
+    text-align: center;
+}
+
+.testimonial-border{
+    width: 160px;
+    height: 5px;
+    background: #6ab04c;
+    margin: 26px auto;
+}
+
+.testimonial-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.testimonial{
+    background: #fff;
+    padding: 30px;
+}
+.testimonial img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.testimonial-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.testimonial-title{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+@media screen and (max-width:960px){
+    .testimonial-col{
+        flex: 100%;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .testimonial-col{
+        flex: 100%;
+        max-width: 100%;
+    }
+    .testimonial-title{
+        justify-content: center;
+    }
+}
+
+
+/* Link "Nach oben" rechts ausrichten */
+/*.site-footer {
+    text-align: center;
+    position: sticky;
+    margin: 0 auto;
+    padding: 0;
+    bottom: 0;
+    background-color: white;
+    border-radius: 1em;
+
+}*/
+/*
+.site-footer {
+
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+}*/
+
+.site-footer{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+
+    max-width: 1200px;
+    min-width: 100px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+
+
+}
+
+/* Seiteninterne Links sollen sanft gleiten  */
+html {
+    scroll-behavior: smooth;
+}
+
+/*Hier ist die Definition der Flip-box der Produkte... Wird noch angepasst!!!!*/
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box :hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+/*Kontaktformular*/
+
+.row {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: 0 auto;
+      background-color: #f1f1f1;
+  }
+
+.col {
+    flex: 1 1 8%;
+    margin: 0 0 0.5rem 0;
+    padding: 0.5em 10px;
+    box-sizing: border-box;
+}
+
+   .container {
+       max-width: 1200px;
+       margin: 0 auto;
+       display: flex;
+       flex-flow: row wrap;
+   }
+
+.box--full {
+    display: flex;
+    margin: .5rem;
+    background: white;
+    border-bottom: 3px solid #dedfdf;
+    flex: 1 1 100%;
+    flex-flow: column;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.box--half {
+    display: flex;
+    margin: .5rem;
+    background: white;
+    border-bottom: 3px solid #dedfdf;
+    flex: 1 1 30%;
+    flex-flow: column;
+    padding: 1rem;
+    border-radius: 4px;
+    flex-shrink: 1;
+    flex-basis: 250px;
+
+}
+
+   input[type="email"],
+   input[type="text"],
+   input[type="number"],
+   textarea {
+       font-size: 1.3em;
+       width: 100%;
+   }
+
+label {
+    font-weight: bold;
+    color: #000;
+    font-size: 1em;
+}
+
+input {
+    border: none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.title {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    width: 100%;
+    padding-left: 10px;
+/*margin: 24px 0 16px;*/
+    margin: auto;
+    text-align: center;
+
+}
+
+#submit {
+    padding: 1.5rem;
+    margin: .5rem;
+    border: 0 none;
+    font-size: 1.5em;
+    border-bottom: 3px solid cornflowerblue;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    border-radius: 4px;
+
+
+    }
+
+#submit:hover #submit:focus{
+    cursor: pointer;
+}
+
+.error {
+    color: orangered;
+}
+
+.rating {
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+
+
+.rating-star-design, .rating-star-components {
+    font-size: 1.3em;
+    cursor: pointer;
+    color: cornflowerblue;
+    transition: filter linear .3s;
+}
+
+.rating-star-design:hover, .rating-star-components:hover {
+    filter: drop-shadow(1px 1px 4px cornflowerblue);
+}
+
+
+
+
+
