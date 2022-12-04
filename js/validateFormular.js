@@ -3,6 +3,7 @@ const lastName = document.getElementById("l_name");
 const eMail = document.getElementById("email");
 const ratingDesign = document.getElementById("rating-design");
 const ratingComponents = document.getElementById("rating-components");
+const comment = document.getElementById("kommentar");
 const ratingStarsDesign = [...document.getElementsByClassName("rating-star-design")];
 const ratingStarsComponents = [...document.getElementsByClassName("rating-star-components")];
 const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -10,6 +11,17 @@ const numbers = /^[0-9]+$/;
 let ratingDesignCount = 0;
 let ratingComponentsCount = 0;
 let error = false;
+
+
+const postFeedback = () => {
+    fetch ("https://web-modules.dev/api/v1/feedback",{
+    method: "POST",
+    headers: {
+        Authorization: "Bearer Li56CUyS4RmeOywFWwM3Gmq0YKw0nYvBPQygTxgx", // Part nach "Bearer " mit eigenem Token ersetzen
+    },
+    body: 'name='+lastName+'&email='+eMail+'&rating_design='+ratingDesignCount+'&rating_components='+ratingComponentsCount+'&comment='+comment+''
+});
+}
 
 function validate() {
 
@@ -54,22 +66,28 @@ function validateEmail(textField){
         parent.querySelector(".error").style.display = "block";
         return true
     }
-    if (!textField.value.match(emailFormat)) {
+    else if(!textField.value.match(emailFormat)) {
         let parent = textField.parentElement;
         parent.querySelector(".error").innerText = "Kein gültiges Format";
         parent.querySelector(".error").style.display = "block";
         return true;
     }
-    if (textField.value.length > 200) {
+    else if (textField.value.length > 200) {
         let parent = textField.parentElement;
         parent.querySelector(".error").innerText = "Maximal 200 Zeichen";
         parent.querySelector(".error").style.display = "block";
         return true
+    }else{
+            
+        //FormularPOST
+        postFeedback();
+
     }
 
     let parent = textField.parentElement;
     parent.querySelector(".error").style.display = "none";
     return false;
+
 
 }
 
@@ -121,3 +139,5 @@ function writeResult(ratingType, rating){
 
 executeRating(ratingStarsDesign,"rating-star-design ");
 executeRating(ratingStarsComponents,"rating-star-components ");
+
+
