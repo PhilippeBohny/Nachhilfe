@@ -15,12 +15,12 @@ let error = false;
 
 const postFeedback = () => {
     fetch ("https://web-modules.dev/api/v1/feedback",{
-    method: "POST",
-    headers: {
-        Authorization: "Bearer Li56CUyS4RmeOywFWwM3Gmq0YKw0nYvBPQygTxgx", // Part nach "Bearer " mit eigenem Token ersetzen
-    },
-    body: 'name='+lastName+'&email='+eMail+'&rating_design='+ratingDesignCount+'&rating_components='+ratingComponentsCount+'&comment='+comment+''
-});
+        method: "POST",
+        headers: {
+            Authorization: "Bearer 87|Li56CUyS4RmeOywFWwM3Gmq0YKw0nYvBPQygTxgx",
+        },
+        body: 'name='+lastName+'&email='+eMail+'&rating_design='+ratingDesignCount+'&rating_components='+ratingComponentsCount+'&comment='+comment+''
+    });
 }
 
 function validate() {
@@ -78,7 +78,7 @@ function validateEmail(textField){
         parent.querySelector(".error").style.display = "block";
         return true
     }else{
-            
+
         //FormularPOST
         postFeedback();
 
