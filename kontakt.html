@@ -1,52 +1,57 @@
 <!doctype html>
 <html lang="de" id="top">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible"
-          content="ie=edge">
-    <title>Kontakt - FFHS Studentenseite</title>
-    <meta name="description"
-          content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+              content="ie=edge">
+        <title>Kontakt - FFHS Studentenseite</title>
+        <meta name="description"
+              content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!">
 
-    <!-- Die Verbindung zum Stylesheet-->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-<!--TODO: nav via javascript on every page-->
-<        <nav class="site-nav">
-    <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
-    <ul class="menu" id="menu">
-        <li class="nav-current"><a href="index.html" class="nav-current">Home</a></li>
-        <li class="nav-item"><a href="#Dienstleistung">Dienstleistungen</a></li>
-        <li class="nav-item"><a href="produkte.html">Produkte</a></li>
-        <li class="nav-item"><a href="#Shop">Shop</a></li>
-        <li class="nav-item"><a href="feedback.html">Feedback</a></li>
-        <li class="menu-button"><a href="javascript:void(0);" class="menu-icon" onclick="toggleHamburger()"><i
-                class="fa fa-bars"></i></a></li>
-    </ul>
-</nav>
-<main class="site-content" id="content">
-    <h1>Kontakt</h1>
-    <section>
-        <p>Max Mustermann<br>Musterstrasse 123<br>1234 Musterhausen</p>
-    </section>
-    <section>
-        <p>Telefon: 0791234567<br>E-Mail: mail@mailadresse.ch<br>musterpage.com</p>
+        <!-- load stylesheet-->
+        <link href="css/style.css" rel="stylesheet">
 
-    </section>
-</main>
+        <!-- load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-<!--TODO: nav via javascript on every page-->
-<footer class="site-footer">
+        <!-- load scripts-->
+        <script src="js/navigation.js" defer></script>
+    </head>
+    <body>
+        <nav class="site-nav">
+        <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
+            <ul class="menu" id="menu">
+                <li class="nav-standard"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="produkte.html">Produkte</a></li>
+                <li class="nav-item"><a href="feedback.html">Feedback</a></li>
+                <li class="menu-button" id="toggleHamburgerMenu"><a class="menu-icon"><i
+                        class="fa fa-bars"></i></a></li>
+            </ul>
+    </nav>
+    <main class="site-content" id="content">
+        <h1>Kontakt</h1>
+        <section>
+            <p>Max Mustermann<br>Musterstrasse 123<br>1234 Musterhausen</p>
+        </section>
+        <section>
+            <p>Telefon: 0791234567<br>E-Mail: mail@mailadresse.ch<br>musterpage.com</p>
 
-    <a href="#top">Nach oben</a>
-    <a href="impressum.html"> Impressum</a>
-    <a href="datenschutz.html"> Datenschutzerklärung</a>
-    <a href="kontakt.html"> Kontakt</a>
+        </section>
+    </main>
 
-</footer>
+        <footer class="site-footer" id="site-footer">
+            <ul class="footer-menu" id="footer-menu">
+                <li class="nav-item"><a href="#top">Nach oben</a></li>
+                <li class="nav-item"><a href="impressum.html"> Impressum</a></li>
+                <li class="nav-item"><a href="datenschutz.html"> Datenschutz</a></li>
+                <li class="nav-current"><a href="kontakt.html"> Kontakt</a></li>
+                <li class="footer-menu-button" id="toggleFooterMenu"><a class="menu-icon"><i
+                        class="fa fa-plus-circle" id="footer-icon"></i></a></li>
+            </ul>
 
-</body>
+        </footer>
+
+    </body>
 </html>

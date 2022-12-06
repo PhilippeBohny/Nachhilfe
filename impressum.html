@@ -11,8 +11,14 @@
     <meta name="description"
           content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!">
 
-    <!-- Die Verbindung zum Stylesheet-->
+    <!-- load stylesheet-->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- load scripts-->
+    <script src="js/navigation.js" defer></script>
 
 </head>
 
@@ -20,12 +26,10 @@
 <nav class="site-nav">
     <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
     <ul class="menu" id="menu">
-        <li class="nav-current"><a href="index.html" >Home</a></li>
-        <li class="nav-item"><a href="#Dienstleistung">Dienstleistungen</a></li>
+        <li class="nav-standard"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="produkte.html">Produkte</a></li>
-        <li class="nav-item"><a href="#Shop">Shop</a></li>
         <li class="nav-item"><a href="feedback.html">Feedback</a></li>
-        <li class="menu-button"><a href="javascript:void(0);" class="menu-icon" onclick="toggleHamburger()"><i
+        <li class="menu-button" id="toggleHamburgerMenu"><a class="menu-icon"><i
                 class="fa fa-bars"></i></a></li>
     </ul>
 </nav>
@@ -60,12 +64,15 @@
         jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher
         Webseiten erfolgen auf eigene Gefahr des Nutzers oder der Nutzerin.</p>
 </main>
-<footer class="site-footer">
-
-    <a href="#top">Nach oben</a>
-    <a href="impressum.html"> Impressum</a>
-    <a href="datenschutz.html"> Datenschutzerklärung</a>
-    <a href="kontakt.html"> Kontakt</a>
+<footer class="site-footer" id="site-footer">
+    <ul class="footer-menu" id="footer-menu">
+        <li class="nav-item"><a href="#top">Nach oben</a></li>
+        <li class="nav-current"><a href="impressum.html"> Impressum</a></li>
+        <li class="nav-item"><a href="datenschutz.html"> Datenschutz</a></li>
+        <li class="nav-item"><a href="kontakt.html"> Kontakt</a></li>
+        <li class="footer-menu-button" id="toggleFooterMenu"><a class="menu-icon"><i
+                class="fa fa-plus-circle" id="footer-icon"></i></a></li>
+    </ul>
 
 </footer>
 </body>

@@ -1,121 +1,109 @@
 <!doctype html>
 <html lang="de" id="top">
 
-<head>
-    <!-- Information über diese Website -->
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <!-- Information über diese Website -->
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Startseite - FFHS Studentenseite</title>
-    <meta name="description"
-          content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!">
+        <title>Startseite - FFHS Studentenseite</title>
+        <meta name="description"
+              content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!">
 
-    <!-- Die Verbindung zum Stylesheet-->
-    <link href="css/style.css" rel="stylesheet">
+        <!-- load stylesheet-->
+        <link href="css/style.css" rel="stylesheet">
 
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Lade sämtliche JavaScripts-->
-    <script src="index.js"></script>
-    <script src="js/script.js"></script>
+        <!-- load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-</head>
+        <!-- load scripts-->
+        <script src="js/navigation.js" defer></script>
+        <script src="index.js"></script>
 
-<body>
-<nav class="site-nav">
-    <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
-    <ul class="menu" id="menu">
-        <li class="nav-current"><a href="index.html" class="nav-current">Home</a></li>
-        <li class="nav-item"><a href="#Dienstleistung">Dienstleistungen</a></li>
-        <li class="nav-item"><a href="produkte.html">Produkte</a></li>
-        <li class="nav-item"><a href="#Shop">Shop</a></li>
-        <li class="nav-item"><a href="feedback.html">Feedback</a></li>
-        <li class="menu-button"><a href="javascript:void(0);" class="menu-icon" onclick="toggleHamburger()"><i
-                class="fa fa-bars"></i></a></li>
-    </ul>
-</nav>
-<header>
+    </head>
 
-
-
-    <!--Hier sollen Bilder mittels javascript im Wechsel angezeigt werden-->
-    <h1><img src="./img/melchseefruttwide.jpg"
-             alt="Panorama von Melchsee Frutt"
-             width="100%"
-             height="200"></h1>
-
-</header>
-<div class= "site">
-
-    <main class="site-content" id="content">
-        <section class="content-intro"> <!--content-intro zu ende-->
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ipsam</h1>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorem dolores dolorum fugiat illo, magnam nihil quis reprehenderit vitae voluptate! Obcaecati, sequi!.</p>
-        </section>
-        <!--Bild stammt von Bundesamt für Statistik und zeigt die Entwicklung der Beschäftigten-->
-
-        <iframe title="Entwicklung der Beschäftigung"
-                aria-label="Interactive line chart"
-                id="datawrapper-chart-pvD2D"
-                src="https://datawrapper.dwcdn.net/92cb39088c098703582832a159c61d21/5/"></iframe>
-
-
-        <section><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis culpa delectus impedit itaque, laboriosam laborum libero nam, necessitatibus, nesciunt officiis quae quisquam vel. Ducimus itaque labore molestiae officiis unde!
-
-        </p>
-            <p>Lorem20
-            </p>
-        </section>
-
-        <!--<section class="testimonials">
-            <h2>Testimonials</h2>
-            <ul class="testimonialsList">
-                <li class="testimonialListElement">
-
-                    <img class="testimonials-pic" src="img/AdobeStock_185528677.jpeg" class="testimonials-pic"
-                         alt="imageOfPerson"
-                    >
-                    <div class="testimonial-text">
-                        <h1 class="testimonial-name">
-                            <div>Name</div>
-                            <div>Firma</div>
-                        </h1>
-
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque esse eum incidunt
-                            minus nemo quidem quisquam voluptates? Dolorum, harum.</div>
-                    </div>
-
-                </li>
-
-
+    <body>
+        <nav class="site-nav">
+            <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
+            <ul class="menu" id="menu">
+                <li class="nav-current"><a href="index.html" class="nav-current">Home</a></li>
+                <li class="nav-item"><a href="produkte.html">Produkte</a></li>
+                <li class="nav-item"><a href="feedback.html">Feedback</a></li>
+                <li class="menu-button" id="toggleHamburgerMenu"><a class="menu-icon"><i
+                        class="fa fa-bars"></i></a></li>
             </ul>
-    -->
+        </nav>
+        <header>
+            <!--Hier sollen Bilder mittels javascript im Wechsel angezeigt werden-->
+            <img src="./img/melchseefruttwide.jpg"
+                     alt="Panorama von Melchsee Frutt"
+                     width="100%"
+                     height="200">
+        </header>
+        <div class= "site">
+            <main class="site-content" id="content">
+                <section class="content-intro"> <!--content-intro zu ende-->
+                    <h1 class="title">Willkommen auf unserer Webseite</h1>
 
+                    <p>Bei uns kannst du Testimonials begutachten, diese liken, Produkte ansehen, diese aber
+                        nicht kaufen und
+                        unsere Webseite bewerten. Am besten machst du das doch gleich.</p>
+                </section>
+                <!--Bild stammt von Bundesamt für Statistik und zeigt die Entwicklung der Beschäftigten-->
+                <section>
+                    <iframe title="Entwicklung der Beschäftigung"
+                            aria-label="Interactive line chart"
+                            id="datawrapper-chart-pvD2D"
+                            src="https://datawrapper.dwcdn.net/92cb39088c098703582832a159c61d21/5/"></iframe>
+                    <p>Wir konnten über ein iframe die Beschäftigungsstatistik vom Bundesamt für Statistik hier einbetten.
+                        Warum? Weil wir es ausprobieren wollten!</p>
+                </section>
 
-        </section>
+                </section>
 
-        <h1>Testimonials</h1>
-        <div class="testimonial-border"></div>
-        <section id="testimonials">
+                <h1 class="title">Testimonials</h1>
+                <div class="testimonial-border"></div>
+                <section id="testimonials">
+                    <!--space for testimonials -->
+                </section>
+            </main>
+        </div>
 
-
-
-        </section>
-
-    </main>
-</div>
-
-
-<footer class="site-footer">
-
-    <a href="#top">Nach oben</a>
-    <a href="impressum.html"> Impressum</a>
-    <a href="datenschutz.html"> Datenschutzerklärung</a>
-    <a href="kontakt.html"> Kontakt</a>
-
-</footer>
-</body>
+        <footer class="site-footer" id="site-footer">
+            <ul class="footer-menu" id="footer-menu">
+                <li class="nav-standard"><a href="#top">Nach oben</a></li>
+                <li class="nav-item"><a href="impressum.html"> Impressum</a></li>
+                <li class="nav-item"><a href="datenschutz.html"> Datenschutz</a></li>
+                <li class="nav-item"><a href="kontakt.html"> Kontakt</a></li>
+                <li class="footer-menu-button" id="toggleFooterMenu"><a class="menu-icon"><i
+                        class="fa fa-plus-circle" id="footer-icon"></i></a></li>
+            </ul>
+        </footer>
+    </body>
 </html>
+
+
+<!-- TESTIMONIAL EXAMPLE
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <ul class="testimonialsList">
+            <li class="testimonialListElement">
+
+                <img class="testimonials-pic" src="img/AdobeStock_185528677.jpeg" class="testimonials-pic"
+                     alt="imageOfPerson"
+                >
+                <div class="testimonial-text">
+                    <h1 class="testimonial-name">
+                        <div>Name</div>
+                        <div>Firma</div>
+                    </h1>
+
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque esse eum incidunt
+                        minus nemo quidem quisquam voluptates? Dolorum, harum.</div>
+                </div>
+
+            </li>
+    </ul>
+-->
