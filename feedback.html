@@ -1,133 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de" id="top">
-<head>
+  <head>
     <!-- Information über diese Website -->
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Feedback - FFHS Studentenseite</title>
-    <meta name="description"
-          content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!">
-
+    <meta
+      name="description"
+      content="Diese Seite wird in an der FFHS im Rahmen der Semesterarbeit im Fach Web Grundlagen erstellt!"
+    />
 
     <!-- load stylesheet-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
 
     <!-- load icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
     <!-- load scripts-->
     <script src="js/navigation.js" defer></script>
     <script src="js/validateFormular.js" defer></script>
-    <script src="js/formularPost.js" defer></script>
+  </head>
 
-</head>
-
-<body>
-<nav class="site-nav">
-    <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
-    <ul class="menu" id="menu">
+  <body>
+    <nav class="site-nav">
+      <!--Main Navigation inside <header> mittels class="current" wird die Position angegeben-->
+      <ul class="menu" id="menu">
         <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="produkte.html">Produkte</a></li>
         <li class="nav-current"><a href="feedback.html">Feedback</a></li>
-        <li class="menu-button" id="toggleHamburgerMenu"><a class="menu-icon"><i
-                class="fa fa-bars"></i></a></li>
-    </ul>
-</nav>
-<header>
-
-
-
-</header>
-<main class="site-content" id="content">
-    <div class="row">
+        <li class="menu-button" id="toggleHamburgerMenu"
+          ><a class="menu-icon"><i class="fa fa-bars"></i></a
+        ></li>
+      </ul>
+    </nav>
+    <header> </header>
+    <main class="site-content" id="content">
+      <div class="row">
         <h1 class="title">Feedback</h1>
         <div class="col col-span-7">
-            <form method="POST">
-                <div class="container">
+          <form method="POST">
+            <div class="container">
+              <div class="box--half">
+                <label>Vorname</label>
+                <input
+                  type="text"
+                  id="f_name"
+                  name="firstName"
+                  placeholder="Vorname"
+                  required
+                />
+                <span class="error" aria-live="polite"></span>
+              </div>
+              <div class="box--half">
+                <label>Nachname</label>
+                <input
+                  type="text"
+                  id="l_name"
+                  name="l_name"
+                  placeholder="Nachname"
+                  required
+                />
+                <span class="error" aria-live="polite"></span>
+              </div>
+              <div class="box--full">
+                <label>Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="beispiel@adresse.com"
+                  required
+                />
+                <span class="error" aria-live="polite"></span>
+              </div>
+              <div class="box--full">
+                <label>Kommentar</label>
+                <textarea
+                  id="kommentar"
+                  name="kommentar"
+                  type="text"
+                  placeholder="Diese Seite gefällt mir!"
+                ></textarea>
+                <span class="error" aria-live="polite"></span>
+              </div>
 
-                    <div class="box--half">
-                        <label>Vorname</label>
-                        <input type="text" id="f_name" name="firstName" placeholder="Vorname" required>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
-                    <div class="box--half">
-                        <label>Nachname</label>
-                        <input type="text" id="l_name" name="l_name" placeholder="Nachname" required>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
-                    <div class="box--full">
-                        <label>Email</label>
-                        <input id="email" name="email" type="email" placeholder="beispiel@adresse.com"
-                               required>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
-                    <div class="box--full">
-                        <label>Kommentar</label>
-                        <textarea id="kommentar" name="kommentar" type="text" placeholder="Diese Seite gefällt mir!"></textarea>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
-
-                    <div class="box--half">
-                        <label>Bewertung Design</label>
-                        <div class="rating" id="rating-design">
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                            <i class="rating-star-design fa-regular fa-star"></i>
-                        </div>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
-
-                    <div class="box--half">
-                        <label>Bewertung Komponenten</label>
-                        <div class="rating" id="rating-components">
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                            <i class="rating-star-components fa-regular fa-star"></i>
-                        </div>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
-
-
-
+              <div class="box--half">
+                <label>Bewertung Design</label>
+                <div class="rating" id="rating-design">
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
+                  <i class="rating-star-design fa-regular fa-star"></i>
                 </div>
-                <div class="container">
-                    <input type="button" id="submit" value="Abschicken">
+                <span class="error" aria-live="polite"></span>
+              </div>
+
+              <div class="box--half">
+                <label>Bewertung Komponenten</label>
+                <div class="rating" id="rating-components">
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
+                  <i class="rating-star-components fa-regular fa-star"></i>
                 </div>
-            </form>
+                <span class="error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="container">
+              <input
+                type="button"
+                id="submit"
+                value="Abschicken"
+                onclick="validate()"
+              />
+            </div>
+          </form>
+          <div id="success"></div>
         </div>
-    </div>
-</main>
+      </div>
+    </main>
 
-<footer class="site-footer" id="site-footer">
-    <ul class="footer-menu" id="footer-menu">
+    <footer class="site-footer" id="site-footer">
+      <ul class="footer-menu" id="footer-menu">
         <li class="nav-standard"><a href="#top">Nach oben</a></li>
         <li class="nav-item"><a href="impressum.html"> Impressum</a></li>
         <li class="nav-item"><a href="datenschutz.html"> Datenschutz</a></li>
         <li class="nav-item"><a href="kontakt.html"> Kontakt</a></li>
-        <li class="footer-menu-button" id="toggleFooterMenu"><a class="menu-icon"><i
-                class="fa fa-plus-circle" id="footer-icon"></i></a></li>
-    </ul>
-
-</footer>
-</body>
+        <li class="footer-menu-button" id="toggleFooterMenu"
+          ><a class="menu-icon"
+            ><i class="fa fa-plus-circle" id="footer-icon"></i></a
+        ></li>
+      </ul>
+    </footer>
+  </body>
 </html>
-
-
-
